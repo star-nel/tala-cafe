@@ -33,9 +33,9 @@ export default function Testimonials() {
           <div className="reviews-intro"><p className="eyebrow"><span /> Kind words from around here</p><h2 id="reviews-title">Better when<br /><em>shared.</em></h2><p>We could tell you how much we love this place. But we think our neighbors say it best.</p><div className="review-controls"><button type="button" onClick={() => move(-1)} aria-label="Previous review">←</button><button type="button" onClick={() => move(1)} aria-label="Next review">→</button><span>{String(index + 1).padStart(2, '0')} <i>/</i> {String(testimonials.length).padStart(2, '0')}</span></div></div>
           <div className="review-card" aria-live="polite" aria-atomic="true" key={index}>
             <div className="quote-mark" aria-hidden="true">“</div>
-            <div className="review-stars" aria-label={`${review.rating} out of 5 stars`}>{Array.from({ length: review.rating }, (_, star) => <span key={star} aria-hidden="true">★</span>)}</div>
+            <div className="review-stars" aria-label={`${review.rating} out of 5 stars`}>{Array.from({ length: review.rating }, (_, star) => <span key={star} aria-hidden="true" />)}</div>
             <blockquote>{review.quote}</blockquote>
-            <div className="review-person"><span className="person-monogram" aria-hidden="true">{review.name.slice(0, 1)}</span><span><strong>{review.name}</strong><small>{review.detail}</small></span><span className="review-verified">Local love <b>✳</b></span></div>
+            <div className="review-person"><span className="person-monogram" aria-hidden="true">{review.name.slice(0, 1)}</span><span><strong>{review.name}</strong><small>{review.detail}</small></span><span className="review-verified">Local love <b aria-hidden="true" /></span></div>
           </div>
         </div>
       </div>

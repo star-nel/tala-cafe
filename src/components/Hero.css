@@ -25,9 +25,9 @@
 .stage-croissant .food-art { animation: stage-float 7s ease-in-out -2s infinite; }
 .stage-pasta .food-art { animation: stage-float 8s ease-in-out -1s infinite; }
 .stage-cake .food-art { animation: stage-float 7.3s ease-in-out -3s infinite; }
-.stage-spark { position: absolute; z-index: 5; color: #e2a853; }
-.spark-one { top: 12%; right: 13%; font-size: 30px; }
-.spark-two { bottom: 25%; left: 7%; color: #f1d09d; font-size: 18px; }
+.stage-spark { position: absolute; z-index: 5; width: 20px; aspect-ratio: 1; background: #e2a853; clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%); }
+.spark-one { top: 12%; right: 13%; width: 30px; }
+.spark-two { bottom: 25%; left: 7%; width: 17px; background: #b96720; }
 .stage-caption { position: absolute; right: 60px; bottom: 5px; display: flex; align-items: center; gap: 9px; color: var(--muted); font-family: var(--serif); font-size: 13px; font-style: italic; }
 .caption-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
 .scroll-cue { position: absolute; right: 30px; bottom: 46px; display: flex; align-items: center; gap: 11px; color: #8c7862; font-size: 9px; letter-spacing: .13em; text-transform: uppercase; writing-mode: vertical-rl; }

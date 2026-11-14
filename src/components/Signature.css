@@ -16,7 +16,7 @@
 .signature-card .food-art { width: min(94%, 490px); }
 .signature-card-glow { position: absolute; top: 16%; left: 15%; width: 70%; height: 70%; border-radius: 50%; background: rgba(196, 126, 62, .12); filter: blur(48px); }
 .dish-stamp { position: absolute; z-index: 2; top: 26px; right: 27px; width: 67px; height: 67px; display: grid; place-content: center; border: 1px solid rgba(245, 234, 217, .55); border-radius: 50%; color: #f5d6a5; font-family: var(--serif); font-size: 10px; line-height: 1.3; text-align: center; transform: translateZ(80px) rotate(9deg); }
-.dish-sprig { position: absolute; bottom: 36px; left: 40px; color: #d99a51; font-size: 28px; transform: translateZ(50px); }
+.dish-sprig { position: absolute; bottom: 36px; left: 40px; width: 24px; aspect-ratio: 1; background: #d99a51; clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%); transform: translateZ(50px); }
 @media (max-width: 850px) { .signature-layout { gap: 38px; } .signature-card, .signature-card .tilt-card-inner { min-height: 380px; } }
 @media (max-width: 680px) {
   .signature-layout { grid-template-columns: 1fr; gap: 28px; }

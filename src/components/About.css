@@ -12,7 +12,7 @@
 .about-frame { width: 74%; height: 400px; display: grid; overflow: hidden; place-items: center; border: 1px solid rgba(245, 234, 217, .14); border-radius: 48% 48% 7px 7px; background: radial-gradient(ellipse at 50% 60%, #60452b, #34251a 62%, #261b14); transform: rotate(4deg); }
 .about-frame .food-art { width: 95%; transform: scale(1.1); }
 .about-circle { position: absolute; right: 3%; bottom: 6%; width: 155px; height: 155px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 9px; border-radius: 50%; color: #f7e7cf; background: #9b5729; box-shadow: 0 16px 42px rgba(0, 0, 0, .28); font-family: var(--serif); font-size: 15px; line-height: 1.35; text-align: center; transform: rotate(-8deg); }
-.about-circle-icon { font-family: sans-serif; font-size: 18px; }
+.about-circle-icon { width: 17px; aspect-ratio: 1; background: currentColor; clip-path: polygon(50% 0, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0 50%, 39% 39%); }
 .about-vertical { position: absolute; top: 23%; left: 1%; color: #a58c71; font-size: 8px; letter-spacing: .14em; text-transform: uppercase; writing-mode: vertical-rl; }
 @media (max-width: 850px) { .about-layout { gap: 42px; } .about-visual { min-height: 410px; } .about-frame { height: 335px; } }
 @media (max-width: 680px) {

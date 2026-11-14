@@ -42,7 +42,7 @@ export default function Signature() {
               <div className="signature-card-glow" />
               <FoodArt name={signatureItem.name} category={signatureItem.category} label={signatureItem.name} />
               <span className="dish-stamp">A house<br />favorite</span>
-              <span className="dish-sprig" aria-hidden="true">✳</span>
+              <span className="dish-sprig" aria-hidden="true" />
             </TiltCard>
           )}
         </div>

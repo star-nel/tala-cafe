@@ -43,7 +43,7 @@ export default function About() {
         </div>
         <div className="about-visual" aria-hidden="true">
           <div className="about-frame"><FoodArt type="toast" label="Fresh garden toast" /></div>
-          <div className="about-circle"><span>Good food.<br />Good company.</span><span className="about-circle-icon">✳</span></div>
+          <div className="about-circle"><span>Good food.<br />Good company.</span><span className="about-circle-icon" aria-hidden="true" /></div>
           <span className="about-vertical">Gather around · since 2014</span>
         </div>
       </div>

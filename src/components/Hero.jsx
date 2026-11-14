@@ -57,8 +57,8 @@ export default function Hero() {
             <div className="stage-item stage-croissant"><FoodArt name="Ensaymada French Toast" category="Breakfast" label="Ensaymada French Toast" /></div>
             <div className="stage-item stage-pasta"><FoodArt name="Pork Sisig Rice Bowl" category="Mains" label="Pork Sisig Rice Bowl" /></div>
             <div className="stage-item stage-cake"><FoodArt name="Ube Cheesecake" category="Desserts" label="Ube Cheesecake" /></div>
-            <span className="stage-spark spark-one" aria-hidden="true">✳</span>
-            <span className="stage-spark spark-two" aria-hidden="true">✦</span>
+            <span className="stage-spark spark-one" aria-hidden="true" />
+            <span className="stage-spark spark-two" aria-hidden="true" />
           </div>
           <div className="stage-caption"><span className="caption-dot" /> Made with a little extra care</div>
         </div>

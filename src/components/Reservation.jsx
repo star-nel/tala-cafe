@@ -56,7 +56,7 @@ export default function Reservation() {
           <div className="reservation-panel">
             {confirmed ? (
               <div className="booking-success" role="status">
-                <span className="success-icon" aria-hidden="true">✓</span><p className="eyebrow">Saved just for you</p><h3>You're on<br /><em>the list.</em></h3>
+                <span className="success-icon" aria-hidden="true" /><p className="eyebrow">Saved just for you</p><h3>You're on<br /><em>the list.</em></h3>
                 <p>Thanks, {values.name}. We have your request for {values.guests} {Number(values.guests) === 1 ? 'guest' : 'guests'} on {values.date} at {values.time}. A confirmation would be sent to {values.email} once online bookings are connected.</p>
                 <button className="text-link" type="button" onClick={() => { setValues(initialValues); setErrors({}); setConfirmed(false) }}>Make another booking <span aria-hidden="true">↗</span></button>
               </div>
