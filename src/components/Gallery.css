@@ -1,0 +1,27 @@
+.gallery-section { background: #211811; }
+.gallery-heading { margin-bottom: 38px; }
+.gallery-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); grid-auto-rows: 205px; gap: 14px; }
+.gallery-tile { min-width: 0; min-height: 0; border: 0; background: transparent; text-align: left; cursor: pointer; }
+.gallery-tile-1, .gallery-tile-6 { grid-row: span 2; }
+.gallery-tile-3 { grid-column: span 2; }
+.gallery-card, .gallery-card .tilt-card-inner { height: 100%; }
+.gallery-card .tilt-card-inner { border-radius: 5px; }
+.gallery-art { width: 100%; height: 100%; display: grid; overflow: hidden; place-items: center; background: radial-gradient(ellipse, rgba(198, 129, 66, .32), transparent 68%), #3d2c20; }
+.gallery-art-2, .gallery-art-7 { background: radial-gradient(ellipse, rgba(111, 130, 77, .31), transparent 66%), #34241a; }
+.gallery-art-3, .gallery-art-8 { background: radial-gradient(ellipse, rgba(182, 91, 48, .3), transparent 66%), #3c261b; }
+.gallery-art .food-art { width: 90%; height: 86%; }
+.gallery-tile-1 .food-art, .gallery-tile-6 .food-art { width: 110%; height: 95%; }
+.gallery-overlay { position: absolute; z-index: 3; inset: auto 0 0; display: flex; align-items: end; justify-content: space-between; gap: 12px; padding: 38px 16px 14px; color: #fff1dd; background: linear-gradient(transparent, rgba(16, 11, 8, .86)); transform: translateZ(45px); }
+.gallery-overlay > span { display: flex; flex-direction: column; gap: 4px; }
+.gallery-overlay small { color: #d9b58e; font-size: 8px; letter-spacing: .09em; text-transform: uppercase; }
+.gallery-overlay strong { font-family: var(--serif); font-size: 15px; font-weight: 500; }
+.gallery-overlay i { display: grid; width: 25px; height: 25px; flex: 0 0 auto; place-items: center; border: 1px solid rgba(245, 234, 217, .5); border-radius: 50%; font-size: 11px; font-style: normal; }
+.lightbox { position: fixed; z-index: 100; inset: 0; display: grid; place-items: center; padding: 24px; background: rgba(10, 7, 5, .86); backdrop-filter: blur(8px); }
+.lightbox-dialog { position: relative; width: min(600px, 100%); padding: 35px; border: 1px solid rgba(245, 234, 217, .18); border-radius: 8px; background: #2a1f17; text-align: center; box-shadow: var(--shadow); }
+.lightbox-close { position: absolute; z-index: 2; top: 12px; right: 14px; width: 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%; color: var(--cream); background: #211811; font-size: 24px; cursor: pointer; }
+.lightbox-art { height: min(50vh, 360px); display: grid; place-items: center; border-radius: 5px; background: radial-gradient(ellipse, #67452d, #332319); }
+.lightbox-art .food-art { width: min(90%, 380px); max-height: 100%; }
+.lightbox-dialog > p { margin: 22px 0 6px; color: var(--accent); font-size: 9px; letter-spacing: .13em; text-transform: uppercase; }
+.lightbox-dialog h3 { margin: 0; font-size: 28px; }
+@media (max-width: 760px) { .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 180px; } .gallery-tile-3 { grid-column: span 1; } }
+@media (max-width: 420px) { .gallery-grid { grid-auto-rows: 155px; gap: 9px; } .gallery-overlay { padding: 30px 10px 10px; } .gallery-overlay strong { font-size: 13px; } .gallery-overlay small { font-size: 7px; } }

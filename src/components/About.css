@@ -1,0 +1,24 @@
+.about-section { overflow: hidden; background: #19130f; }
+.about-layout { display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 90px; }
+.about-copy h2 { margin-bottom: 22px; }
+.about-copy > p:not(.eyebrow) { max-width: 450px; margin-bottom: 20px; color: var(--muted); font-size: 12px; line-height: 2; }
+.about-copy > .text-link { margin-top: 4px; }
+.about-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; margin-top: 52px; padding-top: 22px; border-top: 1px solid var(--line); }
+.stat { display: flex; flex-direction: column; gap: 7px; }
+.stat strong { color: #f2d9b4; font-family: var(--serif); font-size: 30px; font-weight: 500; }
+.stat strong span { color: var(--accent); font-family: Inter, sans-serif; font-size: 13px; }
+.stat > span { color: #a18c75; font-size: 8px; line-height: 1.5; }
+.about-visual { position: relative; min-height: 500px; display: grid; place-items: center; }
+.about-frame { width: 74%; height: 400px; display: grid; overflow: hidden; place-items: center; border: 1px solid rgba(245, 234, 217, .14); border-radius: 48% 48% 7px 7px; background: radial-gradient(ellipse at 50% 60%, #60452b, #34251a 62%, #261b14); transform: rotate(4deg); }
+.about-frame .food-art { width: 95%; transform: scale(1.1); }
+.about-circle { position: absolute; right: 3%; bottom: 6%; width: 155px; height: 155px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 9px; border-radius: 50%; color: #f7e7cf; background: #9b5729; box-shadow: 0 16px 42px rgba(0, 0, 0, .28); font-family: var(--serif); font-size: 15px; line-height: 1.35; text-align: center; transform: rotate(-8deg); }
+.about-circle-icon { font-family: sans-serif; font-size: 18px; }
+.about-vertical { position: absolute; top: 23%; left: 1%; color: #a58c71; font-size: 8px; letter-spacing: .14em; text-transform: uppercase; writing-mode: vertical-rl; }
+@media (max-width: 850px) { .about-layout { gap: 42px; } .about-visual { min-height: 410px; } .about-frame { height: 335px; } }
+@media (max-width: 680px) {
+  .about-layout { grid-template-columns: 1fr; gap: 24px; }
+  .about-stats { margin-top: 38px; }
+  .about-visual { min-height: 370px; }
+  .about-frame { width: 77%; height: 320px; }
+  .about-circle { right: 2%; bottom: 2%; width: 125px; height: 125px; font-size: 13px; }
+}

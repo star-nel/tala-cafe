@@ -1,0 +1,43 @@
+.reservation-section { position: relative; overflow: hidden; background: radial-gradient(ellipse at 0% 50%, rgba(115, 62, 31, .18), transparent 42%), #211811; }
+.reservation-layout { display: grid; grid-template-columns: .72fr 1.28fr; align-items: start; gap: 70px; }
+.reservation-intro { position: sticky; top: 115px; padding-top: 18px; }
+.reservation-intro h2 { margin-bottom: 20px; }
+.reservation-intro > p:not(.eyebrow) { max-width: 290px; color: var(--muted); font-size: 12px; line-height: 1.9; }
+.reservation-hours { display: flex; flex-direction: column; gap: 9px; margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line); }
+.reservation-hours > span { color: #bd8f5d; font-size: 8px; letter-spacing: .13em; text-transform: uppercase; }
+.reservation-hours strong { font-family: var(--serif); font-size: 17px; font-weight: 500; line-height: 1.55; }
+.reservation-hours small { color: #9b8770; font-size: 9px; }
+.reservation-panel { min-width: 0; padding: 36px; border: 1px solid rgba(245, 234, 217, .13); background: rgba(36, 26, 19, .82); }
+.form-heading { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid var(--line); }
+.form-heading > span { color: #d5ab7c; font-size: 10px; letter-spacing: .08em; }
+.form-heading p { margin: 0; color: #9b8975; font-size: 8px; }
+.form-heading b, .field b { color: var(--accent); font-weight: 500; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 19px 16px; }
+.field { min-width: 0; display: flex; flex-direction: column; gap: 8px; color: #cdb9a2; font-size: 9px; }
+.field > span:not(.field-error) { color: #88745d; }
+.field input, .field select, .field textarea { width: 100%; min-height: 43px; padding: 10px 11px; border: 1px solid rgba(245, 234, 217, .14); border-radius: 2px; outline: 0; color: var(--cream); background: #1d1510; font-size: 10px; transition: border-color var(--transition), box-shadow var(--transition); }
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #b97537; box-shadow: 0 0 0 2px rgba(217, 130, 43, .12); }
+.field input[aria-invalid="true"], .field select[aria-invalid="true"] { border-color: #df7962; }
+.field select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='m1 1 5 5 5-5' fill='none' stroke='%23c9a981' stroke-width='1.5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
+.field select option { color: var(--cream); background: var(--bg-soft); }
+.field input[type="date"] { color-scheme: dark; }
+.field textarea { min-height: 84px; resize: vertical; }
+.field textarea::placeholder { color: #756451; }
+.field-wide { grid-column: 1 / -1; }
+.field-error { color: #f29b82; font-size: 9px; line-height: 1.4; }
+.form-submit { width: 100%; justify-content: space-between; margin-top: 23px; }
+.form-disclaimer { margin: 12px 0 0; color: #927d66; font-size: 8px; text-align: center; }
+.booking-success { min-height: 440px; display: flex; align-items: flex-start; justify-content: center; flex-direction: column; }
+.success-icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 25px; border: 1px solid var(--accent); border-radius: 50%; color: var(--accent); }
+.booking-success .eyebrow { margin-bottom: 12px; }
+.booking-success h3 { margin-bottom: 15px; font-size: 50px; line-height: 1; }
+.booking-success > p:not(.eyebrow) { max-width: 400px; color: var(--muted); font-size: 11px; line-height: 1.9; }
+.booking-success .text-link { margin-top: 10px; }
+@media (max-width: 850px) { .reservation-layout { grid-template-columns: .7fr 1.3fr; gap: 32px; } .reservation-panel { padding: 25px; } }
+@media (max-width: 680px) {
+  .reservation-layout { grid-template-columns: 1fr; gap: 30px; }
+  .reservation-intro { position: static; }
+  .reservation-hours { margin-top: 25px; }
+  .reservation-panel { padding: 22px 16px; }
+}
+@media (max-width: 400px) { .form-grid { grid-template-columns: 1fr; } .field-wide { grid-column: auto; } .form-heading { align-items: flex-start; flex-direction: column; } }

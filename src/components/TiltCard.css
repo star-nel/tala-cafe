@@ -1,0 +1,25 @@
+.tilt-card { --tilt-x: 0deg; --tilt-y: 0deg; --shine-x: 50%; --shine-y: 50%; position: relative; perspective: 1000px; transform-style: preserve-3d; -webkit-transform-style: preserve-3d; transition: transform 320ms ease, filter 320ms ease; }
+.tilt-card-inner { position: relative; z-index: 1; height: 100%; overflow: hidden; border: 1px solid rgba(245, 234, 217, .1); border-radius: var(--radius-large); background: var(--card); transform: rotateX(var(--tilt-x)) rotateY(var(--tilt-y)); transform-style: preserve-3d; transition: transform 180ms ease-out, box-shadow 300ms ease; }
+.tilt-card:focus-visible { outline: 2px solid #f3b35f; outline-offset: 5px; }
+.tilt-shine { position: absolute; z-index: 2; inset: 0; border-radius: var(--radius-large); background: radial-gradient(circle at var(--shine-x) var(--shine-y), rgba(255, 242, 219, .2), transparent 42%); opacity: 0; pointer-events: none; transition: opacity 250ms ease; }
+.tilt-card:hover .tilt-shine, .tilt-card:focus-within .tilt-shine, .tilt-card[data-tilting="true"] .tilt-shine { opacity: 1; }
+.tilt-card:hover .tilt-card-inner, .tilt-card:focus-visible .tilt-card-inner { box-shadow: 0 28px 60px rgba(0, 0, 0, .38); }
+@supports selector(.tilt-card:has(+ .tilt-card)) {
+  .menu-grid:has(.tilt-card:hover) .tilt-card:not(:hover), .gallery-grid:has(.tilt-card:hover) .tilt-card:not(:hover) { filter: brightness(.77) blur(1px); }
+}
+.menu-card .food-art, .signature-card .food-art, .gallery-card .food-art { position: relative; z-index: 1; transform: translateZ(60px); transition: transform 300ms ease; }
+.signature-card .food-art { transform: translateZ(75px); }
+.tilt-card:hover .food-art { transform: translateZ(75px) scale(1.025); }
+@media (hover: hover) and (pointer: fine) {
+  .tilt-card:hover { transform: scale(1.035); }
+}
+@media (hover: none) {
+  .tilt-card { animation: card-float 5s ease-in-out infinite; }
+  .tilt-card:nth-child(even) { animation-delay: -2.5s; }
+}
+@keyframes card-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -4px; } }
+@media (prefers-reduced-motion: reduce) {
+  .tilt-card, .tilt-card-inner, .tilt-card .food-art { animation: none !important; transform: none !important; translate: none !important; }
+  .tilt-card:hover { transform: none; }
+  .tilt-shine { display: none; }
+}
